@@ -1,0 +1,39 @@
+# --- Identity ---
+name: "skrpt-builder"
+display_name: "Skrpt Builder"
+description: "Design and generate a complete skrpt from a plain-language description — the guided way to create your first skrpt"
+version: "1.0.0"
+engine: ">=1.0.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+
+# --- Discovery (Hub) ---
+category: "developer"
+tags:
+  - "builder"
+  - "authoring"
+  - "meta"
+  - "getting-started"
+
+# --- Security & Access ---
+requires:
+  services:
+    - "llm-service"
+  permissions: []
+  data_handling: []
+
+# --- Contents ---
+contents:
+  skills: 7
+  prompts: 7
+  workflows: 1
+  services: 1
+  sources: 2
+  documents: 0
+  assets: 1
+  total: 19
