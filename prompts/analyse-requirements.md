@@ -66,7 +66,7 @@ You are a skrpt architect. Read the skrpt authoring reference to understand what
    - Fan-out review (parallel independent analyses)
 3. **List the skills needed** — each skill should do one clear thing. Name them with kebab-case IDs.
 4. **Identify services** — does this need external APIs, MCP servers, or just the LLM?
-5. **Map the inputs** — what `{{input.*}}` variables will the generated skrpt collect? List each with a name, label, and description.
+5. **Map the inputs** — what `{{input.VAR}}` variables will the generated skrpt collect? List each with a name, label, and description.
 6. **Describe the output** — what does the final step produce?
 7. **Note any special requirements** — loops, gates, parallel branches, specific step types.
 

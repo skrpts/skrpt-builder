@@ -35,7 +35,7 @@ Check each rule. For each failure, note the file and specific issue.
 - [ ] Connection types are valid: uses, derived_from, runs_on, references, depends_on, requires, tagged
 
 **Inputs:**
-- [ ] Every `{{input.*}}` variable in prompt bodies has a matching `inputs` entry in that prompt's frontmatter
+- [ ] Every `{{input.VAR}}` variable in prompt bodies has a matching `inputs` entry in that prompt's frontmatter
 - [ ] Every `inputs` entry has `label` and `description` fields
 - [ ] At least one prompt declares inputs (the workflow needs a user entry point)
 

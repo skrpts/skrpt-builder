@@ -35,7 +35,7 @@ You are a skrpt generator. Using the node templates reference for structure and 
 
 ### Prompt Writing Guidelines
 
-- First-step prompts: use `{{input.*}}` variables with matching `inputs` declarations
+- First-step prompts: use `{{input.VAR}}` variables with matching `inputs` declarations
 - Later-step prompts: reference upstream output via `{{steps.previous.output}}` or `{{steps.Step Title.output}}`
 - Every prompt needs a clear role instruction ("You are a...")
 - Include numbered steps for what the LLM should do
@@ -45,7 +45,7 @@ You are a skrpt generator. Using the node templates reference for structure and 
 ### Critical Checks
 
 - Every prompt has `derived_from` connection to its skill
-- Every `{{input.*}}` in prompt body has matching `inputs` frontmatter entry
+- Every `{{input.VAR}}` in prompt body has matching `inputs` frontmatter entry
 - Every `inputs` entry has `label` and `description`
 - Workflow `execution` entries all have `skill`, `prompt`, and `step_type`
 - `contents` counts match the actual number of generated files
