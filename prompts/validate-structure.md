@@ -41,10 +41,12 @@ Check each rule. For each failure, note the file and specific issue.
 
 **Execution:**
 - [ ] Every execution entry has `skill`, `prompt`, and `step_type`
+- [ ] `local.*` step types (local.transform, local.template, local.builtin) do NOT need a `prompt` field
 - [ ] All referenced skill IDs exist as skill files
 - [ ] All referenced prompt IDs exist as prompt files
-- [ ] `step_type` is one of: generation, content, review, synthesis, validation
+- [ ] `step_type` is one of: generation, content, review, synthesis, validation, analysis, or any `local.*`
 - [ ] Parallel blocks have 2+ steps
+- [ ] Context bindings must not be empty strings — provide sensible defaults
 
 **Manifest:**
 - [ ] `contents` counts match the actual number of files per type
@@ -61,12 +63,20 @@ Check each rule. For each failure, note the file and specific issue.
 - [ ] Loops are in workflow frontmatter, NOT in skrptiq.yaml
 - [ ] Each loop has: id, mode, steps (non-empty), maxIterations
 - [ ] until_pass loops have a `verifier` that is in the `steps` list
+- [ ] for_each loops have `inputExpression` (guaranteed runtime failure without it)
+- [ ] for_each loop step prompts use `{{loop.item}}` to access the current item
 - [ ] for_each loops do NOT have a `verifier`
 
 **Data Flow:**
-- [ ] Later-stage prompts reference `{{steps.previous.output}}` or `{{steps.Step Title.output}}`
-- [ ] `output_step` references a skill that exists
+- [ ] Later-stage prompts reference `{{steps.previous.output}}` or `{{steps.Step Title.output}}` or receive data via `{{step.context.*}}`
+- [ ] `output_step` references a skill that exists as a file
+- [ ] `output_step` should be a generation, synthesis, or content step (not review/validation unless it's a gate)
 - [ ] `composite_steps` entries all reference existing skills
+- [ ] Pipeline has at least one generation or synthesis step
+
+**Content Quality:**
+- [ ] All user-facing text uses British English (analyse not analyze, colour not color, organise not organize)
+- [ ] Descriptions are specific and meaningful (not "does various things")
 
 ### Output Format
 

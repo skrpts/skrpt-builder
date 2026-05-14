@@ -2,8 +2,8 @@
 name: "skrpt-builder"
 display_name: "Skrpt Builder"
 description: "Design and generate a complete skrpt from a plain-language description — the guided way to create your first skrpt"
-version: "1.0.1"
-engine: ">=1.0.0"
+version: "1.0.3"
+engine: ">=0.1.0"
 
 # --- Attribution ---
 author:
