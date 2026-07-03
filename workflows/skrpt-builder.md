@@ -51,24 +51,31 @@ execution:
   - skill: "requirements-analysis"
     prompt: "analyse-requirements"
     step_type: "generation"
+    output: { name: "requirements", type: "text" }
   - skill: "architecture-review"
     prompt: "review-architecture"
     step_type: "validation"
+    output: { name: "architecture_review", type: "text" }
   - skill: "node-graph-design"
     prompt: "design-node-graph"
     step_type: "generation"
+    output: { name: "node_graph", type: "text" }
   - skill: "node-generation"
     prompt: "generate-nodes"
     step_type: "generation"
+    output: { name: "nodes", type: "text" }
   - skill: "structure-validation"
     prompt: "validate-structure"
     step_type: "validation"
+    output: { name: "validation_result", type: "decision" }
   - skill: "skrpt-review"
     prompt: "review-skrpt"
     step_type: "validation"
+    output: { name: "review_feedback", type: "text" }
   - skill: "final-assembly"
     prompt: "assemble-skrpt"
     step_type: "synthesis"
+    output: { name: "assembled_skrpt", type: "text" }
 ---
 
 ## Overview
