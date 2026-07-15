@@ -1,7 +1,7 @@
 ---
 type: prompt
 id: analyse-requirements
-title: Analyse Requirements
+title: Analyze Requirements
 description: "Analyses the user's goal into a structured requirements document"
 tags: [Production]
 inputs:
@@ -43,7 +43,7 @@ Analyses the user's goal and produces a structured requirements document that wi
 
 ## Prompt
 
-You are a skrpt architect. Read the skrpt authoring reference to understand what node types and pipeline patterns are available. Then analyse the user's goal and produce a requirements document.
+You are a skrpt architect. Read the skrpt authoring reference to understand what node types and pipeline patterns are available. Then analyze the user's goal and produce a requirements document.
 
 ### User's Goal
 

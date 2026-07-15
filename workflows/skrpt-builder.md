@@ -55,6 +55,7 @@ execution:
   - skill: "architecture-review"
     prompt: "review-architecture"
     step_type: "validation"
+    gate: true
     output: { name: "architecture_review", type: "text" }
   - skill: "node-graph-design"
     prompt: "design-node-graph"
@@ -71,6 +72,7 @@ execution:
   - skill: "skrpt-review"
     prompt: "review-skrpt"
     step_type: "validation"
+    gate: true
     output: { name: "review_feedback", type: "text" }
   - skill: "final-assembly"
     prompt: "assemble-skrpt"
@@ -139,6 +141,6 @@ Produces the final package: directory structure, all files as copyable code bloc
 ## Tips
 
 - **Start simple.** Choose "simple" complexity for your first skrpt. You can always add steps later.
-- **Be specific about your goal.** "Summarise meeting notes into action items and decisions" is better than "help with meetings".
+- **Be specific about your goal.** "Summarize meeting notes into action items and decisions" is better than "help with meetings".
 - **Describe the user's input.** If your skrpt needs a document, URL, or data, say so — it helps the builder design the right input form.
 - **Review the prompts carefully.** The prompts are where the real work happens. Make sure they capture your intent.

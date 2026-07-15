@@ -20,7 +20,7 @@ As the last step in the builder, after the user has approved the generated skrpt
 ## What It Does
 
 1. **Directory listing** — shows the complete file structure
-2. **All files** — each file as a labelled, copyable code block
+2. **All files** — each file as a labeled, copyable code block
 3. **Structured data** — JSON output the app can use to create the workspace
 4. **Quick start** — explains what was built, how to save it, how to run it
 

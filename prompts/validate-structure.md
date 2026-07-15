@@ -75,7 +75,7 @@ Check each rule. For each failure, note the file and specific issue.
 - [ ] Pipeline has at least one generation or synthesis step
 
 **Content Quality:**
-- [ ] All user-facing text uses British English (analyse not analyze, colour not color, organise not organize)
+- [ ] All user-facing text uses British English (analyze not analyze, color not color, organize not organize)
 - [ ] Descriptions are specific and meaningful (not "does various things")
 
 ### Output Format
