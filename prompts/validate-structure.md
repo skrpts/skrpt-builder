@@ -41,10 +41,17 @@ Check each rule. For each failure, note the file and specific issue.
 
 **Execution:**
 - [ ] Every execution entry has `skill`, `prompt`, and `step_type`
-- [ ] `local.*` step types (local.transform, local.template, local.builtin) do NOT need a `prompt` field
+- [ ] `local.*` step types do NOT need a `prompt` field
+- [ ] The `local.*` namespace is **CLOSED**, not open-ended. The engine dispatches exactly seven:
+      `local.builtin`, `local.shell`, `local.http`, `local.template`, `local.passthrough`, `local.merge`, `local.select`.
+      A `local.*` name outside that list reaches no handler, and **the engine refuses the step at
+      dispatch** with an error naming the valid set — so the skrpt fails loudly instead of quietly
+      running as an LLM step on a prompt it was never written to send (GH#1010, GH#1011).
 - [ ] All referenced skill IDs exist as skill files
 - [ ] All referenced prompt IDs exist as prompt files
-- [ ] `step_type` is one of: generation, content, review, synthesis, validation, analysis, or any `local.*`
+- [ ] `step_type` is one of the thirteen the engine can execute — LLM-dispatched:
+      `generation`, `content`, `review`, `synthesis`, `validation`, `analysis`; or engine-dispatched: `local.builtin`, `local.shell`, `local.http`, `local.template`, `local.passthrough`, `local.merge`, `local.select`.
+      **There is no "or any `local.*`".**
 - [ ] Parallel blocks have 2+ steps
 - [ ] Context bindings must not be empty strings — provide sensible defaults
 

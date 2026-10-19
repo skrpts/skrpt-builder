@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.0.14
+GH#1011 — fix the authoring checklist that taught `local.transform`. This package's validation checklist listed it as a valid `local.*` type and told authors the namespace was open-ended ("or any `local.*`"), which is how 14 steps across 8 published packages came to declare a step type the engine cannot execute. The checklist now names the thirteen types the engine actually dispatches and states that the `local.*` namespace is closed.
+
 ## v1.0.13
 GH#844 — migrate the gate step from node-meta (`metadata.gate: true` in the skill) to the canonical execution-entry `gate: true` on the workflow step. Single source of truth; the engine + app read the execution entry. No behaviour change — `IsGate` is identical.
 

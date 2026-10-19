@@ -3,7 +3,7 @@ id: "35d4ee81-7325-4623-9fad-b35e98fded7a"
 name: "skrpt-builder"
 display_name: "Skrpt Builder"
 description: "Design and generate a complete skrpt from a plain-language description — the guided way to create your first skrpt"
-version: "1.0.13"
+version: "1.0.14"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -63,7 +63,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-07-15T11:39:29.468Z"
+  scanned_at: "2026-10-19T12:33:47.974Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
